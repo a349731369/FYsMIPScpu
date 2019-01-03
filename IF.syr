@@ -1,0 +1,622 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: IF.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "IF.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "IF"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : IF
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\myCpu\FYsMIPScpu\pcAdd.v" into library work
+Parsing module <pcAdd>.
+Analyzing Verilog file "E:\myCpu\FYsMIPScpu\pc.v" into library work
+Parsing module <pc>.
+Analyzing Verilog file "E:\myCpu\FYsMIPScpu\IR.v" into library work
+Parsing module <IR>.
+Analyzing Verilog file "E:\myCpu\FYsMIPScpu\InsMem.v" into library work
+Parsing module <InsMEM>.
+Analyzing Verilog file "E:\myCpu\FYsMIPScpu\IF.v" into library work
+Parsing module <IF>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <IF>.
+
+Elaborating module <pc>.
+WARNING:HDLCompiler:189 - "E:\myCpu\FYsMIPScpu\IF.v" Line 37: Size mismatch in connection of port <nextPC>. Formal port size is 32-bit while actual signal size is 1-bit.
+
+Elaborating module <pcAdd>.
+WARNING:HDLCompiler:189 - "E:\myCpu\FYsMIPScpu\IF.v" Line 45: Size mismatch in connection of port <nextPC>. Formal port size is 32-bit while actual signal size is 1-bit.
+
+Elaborating module <InsMEM>.
+Reading initialization file \"E:\\myCpu\\FYsMIPScpu\\FY_test_int.txt\".
+WARNING:HDLCompiler:1670 - "E:\myCpu\FYsMIPScpu\InsMem.v" Line 32: Signal <rom> in initial block is partially initialized.
+WARNING:HDLCompiler:91 - "E:\myCpu\FYsMIPScpu\InsMem.v" Line 40: Signal <rom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\myCpu\FYsMIPScpu\InsMem.v" Line 41: Signal <rom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\myCpu\FYsMIPScpu\InsMem.v" Line 42: Signal <rom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "E:\myCpu\FYsMIPScpu\InsMem.v" Line 43: Signal <rom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:189 - "E:\myCpu\FYsMIPScpu\IF.v" Line 50: Size mismatch in connection of port <IDataOut>. Formal port size is 32-bit while actual signal size is 1-bit.
+
+Elaborating module <IR>.
+WARNING:HDLCompiler:189 - "E:\myCpu\FYsMIPScpu\IF.v" Line 51: Size mismatch in connection of port <instruction>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:\myCpu\FYsMIPScpu\IF.v" Line 53: Size mismatch in connection of port <IRWre>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <IF>.
+    Related source file is "E:\myCpu\FYsMIPScpu\IF.v".
+    Summary:
+	no macro.
+Unit <IF> synthesized.
+
+Synthesizing Unit <pc>.
+    Related source file is "E:\myCpu\FYsMIPScpu\pc.v".
+    Found 32-bit register for signal <curPC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <pc> synthesized.
+
+Synthesizing Unit <pcAdd>.
+    Related source file is "E:\myCpu\FYsMIPScpu\pcAdd.v".
+WARNING:Xst:647 - Input <PCSrc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <immediate> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit adder for signal <curPC[31]_GND_3_o_add_0_OUT> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <pcAdd> synthesized.
+
+Synthesizing Unit <InsMEM>.
+    Related source file is "E:\myCpu\FYsMIPScpu\InsMem.v".
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'InsMEM', is tied to its initial value.
+    Found 32-bit adder for signal <n0040> created at line 40.
+    Found 32-bit adder for signal <n0042> created at line 41.
+    Found 32-bit adder for signal <n0044> created at line 42.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <rom>, simulation mismatch.
+    Found 129x8-bit dual-port Read Only RAM <Mram_rom> for signal <rom>.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <IDataOut<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  32 Latch(s).
+Unit <InsMEM> synthesized.
+
+Synthesizing Unit <IR>.
+    Related source file is "E:\myCpu\FYsMIPScpu\IR.v".
+    Found 32-bit register for signal <IRInstruction>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <IR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 129x8-bit dual-port Read Only RAM                     : 2
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 4
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Latches                                              : 32
+ 1-bit latch                                           : 32
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\ISE\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\ISE\14.7\ISE_DS\ISE\.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_1> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_2> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_3> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_4> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_5> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_6> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_7> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_8> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_9> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_10> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_11> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_12> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_13> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_14> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_15> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_16> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_17> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_18> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_19> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_20> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_21> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_22> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_23> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_24> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_25> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_26> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_27> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_28> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_29> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_30> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_31> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_1> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_2> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_3> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_4> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_5> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_6> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_7> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_8> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_9> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_10> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_11> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_12> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_13> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_14> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_15> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_16> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_17> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_18> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_19> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_20> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_21> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_22> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_23> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_24> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_25> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_26> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_27> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_28> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_29> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_30> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curPC_31> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <InsMEM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_rom1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 129-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0044>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 129-word x 8-bit                    |          |
+    |     addrB          | connected to signal <IAddr>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_rom> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 129-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0040>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 129-word x 8-bit                    |          |
+    |     addrB          | connected to signal <n0042>         |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InsMEM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 129x8-bit dual-port distributed Read Only RAM         : 2
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Multiplexers                                         : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <curPC_1> in Unit <pc> is equivalent to the following 30 FFs/Latches, which will be removed : <curPC_2> <curPC_3> <curPC_4> <curPC_5> <curPC_6> <curPC_7> <curPC_8> <curPC_9> <curPC_10> <curPC_11> <curPC_12> <curPC_13> <curPC_14> <curPC_15> <curPC_16> <curPC_17> <curPC_18> <curPC_19> <curPC_20> <curPC_21> <curPC_22> <curPC_23> <curPC_24> <curPC_25> <curPC_26> <curPC_27> <curPC_28> <curPC_29> <curPC_30> <curPC_31> 
+INFO:Xst:2261 - The FF/Latch <IRInstruction_1> in Unit <IR> is equivalent to the following 30 FFs/Latches, which will be removed : <IRInstruction_2> <IRInstruction_3> <IRInstruction_4> <IRInstruction_5> <IRInstruction_6> <IRInstruction_7> <IRInstruction_8> <IRInstruction_9> <IRInstruction_10> <IRInstruction_11> <IRInstruction_12> <IRInstruction_13> <IRInstruction_14> <IRInstruction_15> <IRInstruction_16> <IRInstruction_17> <IRInstruction_18> <IRInstruction_19> <IRInstruction_20> <IRInstruction_21> <IRInstruction_22> <IRInstruction_23> <IRInstruction_24> <IRInstruction_25> <IRInstruction_26> <IRInstruction_27> <IRInstruction_28> <IRInstruction_29> <IRInstruction_30> <IRInstruction_31> 
+WARNING:Xst:1293 - FF/Latch <curPC_1> has a constant value of 0 in block <pc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <IRInstruction_1> has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pc/curPC_0> has a constant value of 0 in block <IF>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <IF> ...
+
+Optimizing unit <InsMEM> ...
+WARNING:Xst:2677 - Node <Mram_rom12> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom11> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom13> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom14> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom15> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom16> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom17> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom18> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom19> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom110> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom111> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom112> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom113> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom114> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom115> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom116> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom2> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom3> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom4> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom5> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom6> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom7> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom8> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom10> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom20> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom21> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom22> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom23> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom24> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <Mram_rom25> of sequential type is unconnected in block <InsMEM>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_31> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_1> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_2> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_3> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_4> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_5> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_6> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_7> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_8> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_10> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_11> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_9> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_12> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_13> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_14> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_15> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_16> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_17> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_19> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_20> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_18> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_21> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_22> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_24> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_25> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_23> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_26> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_27> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_29> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_30> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <InsMEM/IDataOut_28> of sequential type is unconnected in block <IF>.
+WARNING:Xst:2677 - Node <Mram_rom9> of sequential type is unconnected in block <InsMEM>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block IF, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : IF.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 2
+#      FD                          : 1
+#      LD                          : 1
+# RAMS                             : 1
+#      RAM128X1D                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 64
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               2  out of  126800     0%  
+ Number of Slice LUTs:                    4  out of  63400     0%  
+    Number used as Memory:                4  out of  19000     0%  
+       Number used as RAM:                4
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      6
+   Number with an unused Flip Flop:       4  out of      6    66%  
+   Number with an unused LUT:             2  out of      6    33%  
+   Number of fully used LUT-FF pairs:     0  out of      6     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          69
+ Number of bonded IOBs:                  65  out of    210    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2     |
+N0                                 | NONE(InsMEM_Mram_rom1) | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 1.638ns (Maximum Frequency: 610.389MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 0.700ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.638ns (frequency: 610.389MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.819ns (Levels of Logic = 0)
+  Source:            InsMEM/IDataOut_0 (LATCH)
+  Destination:       IR/IRInstruction_0 (FF)
+  Source Clock:      clk falling
+  Destination Clock: clk rising
+
+  Data Path: InsMEM/IDataOut_0 to IR/IRInstruction_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.472   0.339  InsMEM/IDataOut_0 (InsMEM/IDataOut_0)
+     FD:D                      0.008          IR/IRInstruction_0
+    ----------------------------------------
+    Total                      0.819ns (0.480ns logic, 0.339ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.700ns (Levels of Logic = 1)
+  Source:            IR/IRInstruction_0 (FF)
+  Destination:       IRInstruction<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: IR/IRInstruction_0 to IRInstruction<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.339  IR/IRInstruction_0 (IR/IRInstruction_0)
+     OBUF:I->O                 0.000          IRInstruction_0_OBUF (IRInstruction<0>)
+    ----------------------------------------
+    Total                      0.700ns (0.361ns logic, 0.339ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+N0             |         |         |    1.843|         |
+clk            |         |    0.819|         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 37.17 secs
+ 
+--> 
+
+Total memory usage is 5099644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  176 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

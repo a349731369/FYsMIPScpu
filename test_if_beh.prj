@@ -1,0 +1,7 @@
+verilog work "pcAdd.v"
+verilog work "pc.v"
+verilog work "IR.v"
+verilog work "InsMem.v"
+verilog work "IF.v"
+verilog work "test_if.v"
+verilog work "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

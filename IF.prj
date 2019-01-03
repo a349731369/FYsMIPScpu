@@ -1,0 +1,5 @@
+verilog work "pcAdd.v"
+verilog work "pc.v"
+verilog work "IR.v"
+verilog work "InsMem.v"
+verilog work "IF.v"

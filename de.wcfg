@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/myCpu/FYsMIPScpu/test_if_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_if" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/test_if/uut/pcAdd/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/PCSrc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PCSrc[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PCSrc[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/immediate" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">immediate[31:0]</obj_property>
+      <obj_property name="ObjectShortName">immediate[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[25:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/curPC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">curPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">curPC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/rs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rs[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/nextPC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextPC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pcAdd/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pc/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pc/RST" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pc/PCWre" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">PCWre</obj_property>
+      <obj_property name="ObjectShortName">PCWre</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pc/nextPC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextPC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_if/uut/pc/curPC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">curPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">curPC[31:0]</obj_property>
+   </wvobject>
+</wave_config>

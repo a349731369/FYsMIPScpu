@@ -1,0 +1,3 @@
+verilog work "pcAdd.v"
+verilog work "pc.v"
+verilog work "pcall.v"

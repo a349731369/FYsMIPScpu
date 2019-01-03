@@ -1,0 +1,72 @@
+
+*** Running ngdbuild
+    with args -intstyle ise -p xa7a100tcsg324-2I -dd _ngo -uc "CPUTOP.ucf" "CPUTOP.edf"
+
+
+Command Line: D:\ISE\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle ise
+-p xa7a100tcsg324-2I -dd _ngo -uc CPUTOP.ucf CPUTOP.edf
+
+Executing edif2ngd -quiet "CPUTOP.edf" "_ngo\CPUTOP.ngo"
+Release 14.7 - edif2ngd P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading NGO file
+"E:/myCpu/FYsMIPScpu/project_2/project_2.runs/impl_1/_ngo/CPUTOP.ngo" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "CPUTOP.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGD file "CPUTOP.ngd" ...
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   8 sec
+
+Writing NGDBUILD log file "CPUTOP.bld"...
+
+NGDBUILD done.
+
+*** Running map
+    with args -intstyle pa -w -r 4 -ol high "CPUTOP.ngd"
+
+Using target part "xa7a100tcsg324-2i".
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xa7a100t' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+WARNING:LIT:701 - PAD symbol "dataResult[0]" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "dataResult[0]" is not constrained (LOC) to a
+   specific location.
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+ERROR:Pack:2309 - Too many bonded comps of type "IOB" found to fit this device.
+ERROR:Map:237 - The design is too large to fit the device.  Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device. Note that the number of slices reported may not be reflected accurately as
+   their packing might not have been completed.
+
+Mapping completed.
+See MAP report file "CPUTOP.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   2

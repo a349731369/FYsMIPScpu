@@ -1,0 +1,20 @@
+ISim log file
+Running: E:\myCpu\FYsMIPScpu\test_if_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/myCpu/FYsMIPScpu/test_if_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+WARNING: File "E:/myCpu/FYsMIPScpu/IF.v" Line 37.  For instance uut/pc/, width 32 of formal port nextPC is not equal to width 1 of actual signal nextPC.
+WARNING: File "E:/myCpu/FYsMIPScpu/IF.v" Line 37.  For instance uut/pcAdd/, width 32 of formal port nextPC is not equal to width 1 of actual signal nextPC.
+WARNING: File "E:/myCpu/FYsMIPScpu/IF.v" Line 50.  For instance uut/InsMEM/, width 32 of formal port IDataOut is not equal to width 1 of actual signal instruction.
+WARNING: File "E:/myCpu/FYsMIPScpu/IF.v" Line 50.  For instance uut/IR/, width 32 of formal port instruction is not equal to width 1 of actual signal instruction.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all

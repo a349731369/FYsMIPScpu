@@ -1,0 +1,31 @@
+Running: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/myCpu/FYsMIPScpu/test_if_isim_beh.exe -prj E:/myCpu/FYsMIPScpu/test_if_beh.prj work.test_if work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/myCpu/FYsMIPScpu/pcAdd.v" into library work
+Analyzing Verilog file "E:/myCpu/FYsMIPScpu/pc.v" into library work
+Analyzing Verilog file "E:/myCpu/FYsMIPScpu/IR.v" into library work
+Analyzing Verilog file "E:/myCpu/FYsMIPScpu/InsMem.v" into library work
+Analyzing Verilog file "E:/myCpu/FYsMIPScpu/IF.v" into library work
+Analyzing Verilog file "E:/myCpu/FYsMIPScpu/test_if.v" into library work
+Analyzing Verilog file "D:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "E:/myCpu/FYsMIPScpu/IF.v" Line 37: Size mismatch in connection of port <nextPC>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:/myCpu/FYsMIPScpu/IF.v" Line 45: Size mismatch in connection of port <nextPC>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:/myCpu/FYsMIPScpu/IF.v" Line 50: Size mismatch in connection of port <IDataOut>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:/myCpu/FYsMIPScpu/IF.v" Line 51: Size mismatch in connection of port <instruction>. Formal port size is 32-bit while actual signal size is 1-bit.
+Completed static elaboration
+Compiling module pc
+Compiling module pcAdd
+Compiling module InsMEM
+Compiling module IR
+Compiling module IF
+Compiling module test_if
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\test_if_isim_beh.exe.sim\libPortability.dll".
+Compiled 7 Verilog Units
+Built simulation executable E:/myCpu/FYsMIPScpu/test_if_isim_beh.exe
+Fuse Memory Usage: 27648 KB
+Fuse CPU Usage: 421 ms

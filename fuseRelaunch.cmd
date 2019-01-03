@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/myCpu/FYsMIPScpu/test_if_isim_beh.exe" -prj "E:/myCpu/FYsMIPScpu/test_if_beh.prj" "work.test_if" "work.glbl" 
